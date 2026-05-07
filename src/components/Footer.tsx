@@ -2,9 +2,7 @@ import { NavLink } from 'react-router-dom';
 
 const quickLinks = [
   { label: 'How It Works', to: '/how-it-works' },
-  { label: 'Services', to: '/services' },
-  { label: 'Portfolio', to: '/portfolio' },
-  { label: 'Pricing', to: '/pricing' }
+  { label: 'Services', to: '/services' }
 ];
 
 const resources = [

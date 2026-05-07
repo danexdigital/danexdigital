@@ -2,10 +2,8 @@ import { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 
 const navItems = [
-  { label: 'How It Works', to: '/how-it-works' },
   { label: 'Services', to: '/services' },
-  { label: 'Portfolio', to: '/portfolio' },
-  { label: 'Pricing', to: '/pricing' },
+  { label: 'Contact Us', to: '/contact' },
   { label: 'FAQ', to: '/faq' }
 ];
 

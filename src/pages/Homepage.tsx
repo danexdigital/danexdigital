@@ -29,7 +29,7 @@ function Homepage() {
                 Websites
               </h1>
               <p className="mt-6 max-w-xl text-lg leading-8 text-slate-600 sm:text-xl">
-                We help service businesses get more calls, leads, and customers with fast, proven websites designed to actually grow your business — not just look good.
+                More customers, leads, and sales with fast, proven websites designed to actually grow your business — not just look good.
               </p>
 
               <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:justify-start">
@@ -45,11 +45,11 @@ function Homepage() {
               <div className="mt-10 flex flex-col items-center gap-6 text-sm text-slate-600 sm:flex-row sm:justify-start">
                 <div className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white px-4 py-3 shadow-sm">
                   <span className="inline-flex h-2.5 w-2.5 rounded-full bg-emerald-500" />
-                  Built for results
+                  No Setup Fee
                 </div>
                 <div className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white px-4 py-3 shadow-sm">
                   <span className="inline-flex h-2.5 w-2.5 rounded-full bg-amber-500" />
-                  No fluff, just performance
+                  1 Week Turnaround
                 </div>
               </div>
             </div>
@@ -235,10 +235,10 @@ function Homepage() {
 
           <div className="mt-16 text-center">
             <Link
-              to="/portfolio"
+              to="/services"
               className="inline-flex items-center gap-2 text-white/90 transition hover:text-white"
             >
-              <span>View All Portfolio</span>
+              <span>View Our Services</span>
               <span aria-hidden="true">→</span>
             </Link>
           </div>
