@@ -9,7 +9,6 @@ const resources = [
   { label: 'FAQ', to: '/faq' },
   { label: 'About Us', to: '/about' },
   { label: 'Contact', to: '/contact' },
-  { label: 'Blog', to: '#' }
 ];
 
 function Footer() {
