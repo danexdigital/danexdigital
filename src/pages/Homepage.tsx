@@ -1,5 +1,9 @@
 import { Link } from 'react-router-dom';
 import danexFounder from '../images/DanexFounder.png';
+import triocrop from '../images/triocrop.png';
+import googlesearch from '../images/googlesearch.png';
+import chatgpt from '../images/chatgpt.png';
+import besthospital from '../images/besthospital.png';
 
 const stats = [
   { label: 'Years Exp', value: '5+' },
@@ -32,14 +36,25 @@ function Homepage() {
                 More customers, leads, and sales with fast, proven websites.
               </p>
 
+              <div className="mt-5 flex flex-col items-center gap-6 text-sm text-slate-600 sm:flex-row sm:justify-start">
+                <div className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white px-4 py-3 shadow-sm">
+                  <span className="inline-flex h-2.5 w-2.5 rounded-full bg-emerald-500" />
+                  No Setup Fee
+                </div>
+                <div className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white px-4 py-3 shadow-sm">
+                  <span className="inline-flex h-2.5 w-2.5 rounded-full bg-red-500" />
+                  1 Week Turnaround
+                </div>
+              </div>
+
               <Link
                 to="/book"
-                className="mt-6 inline-flex items-center justify-center gap-4 rounded-[10px] bg-brand px-8 py-3.5 text-base font-semibold text-white shadow-lg shadow-brand/20 transition hover:bg-slate-900"
+                className="mt-5 inline-flex items-center justify-center gap-4 rounded-[10px] bg-brand px-8 py-3.5 text-base font-semibold text-white shadow-lg shadow-brand/20 transition hover:bg-emerald-600"
               >
                 <img
                   src={danexFounder}
                   alt="Danex founder"
-                  className="h-12 w-12 rounded-full border-2 border-white/20 object-cover"
+                  className="h-12 w-12 rounded-[10px] border-2 border-white/20 object-cover"
                 />
 
                 {/* Wrap the text in a column container */}
@@ -54,26 +69,38 @@ function Homepage() {
 
                 <span className="text-xl" aria-hidden="true">→</span>
               </Link>
-
-              <div className="mt-10 flex flex-col items-center gap-6 text-sm text-slate-600 sm:flex-row sm:justify-start">
-                <div className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white px-4 py-3 shadow-sm">
-                  <span className="inline-flex h-2.5 w-2.5 rounded-full bg-emerald-500" />
-                  No Setup Fee
-                </div>
-                <div className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white px-4 py-3 shadow-sm">
-                  <span className="inline-flex h-2.5 w-2.5 rounded-full bg-amber-500" />
-                  1 Week Turnaround
-                </div>
-              </div>
             </div>
 
             <div className="relative">
-              <div className="relative z-10 overflow-hidden rounded-[32px] shadow-2xl">
+              <div className="relative z-10 rounded-[32px] shadow-2xl overflow-visible">
                 <img
-                  src="https://assets.ls-assets.com/provider/istock/2205982417.jpg?w=1200"
+                  src={triocrop}
                   alt="Web UI-UX design concept"
-                  className="h-[540px] w-full object-cover"
+                  className="h-[400px] w-full object-cover rounded-[32px]"
                 />
+                
+                {/* Overlay Images */}
+                {/* Google Search Overlay - Top Left */}
+                <img
+                  src={googlesearch}
+                  alt="Google Search"
+                  className="absolute top-0 left-0 w-50 h-20 object-cover rounded-lg shadow-lg z-20 -translate-y--15 -translate-x-4"
+                />
+                
+                {/* ChatGPT Overlay - Top Right */}
+                <img
+                  src={chatgpt}
+                  alt="ChatGPT"
+                  className="absolute right-0 w-25 h-15 object-cover rounded-lg shadow-lg z-20 -translate-y-40 translate-x-4"
+                />
+                
+                {/* Best Hospital Overlay - Bottom Center */}
+                <img
+                  src={besthospital}
+                  alt="Best Hospital"
+                  className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-40 h-32 object-cover rounded-lg shadow-lg z-20 translate-y-4"
+                />
+              
               </div>
               <div className="absolute -top-6 -right-6 z-20 rounded-3xl bg-emerald-500 px-6 py-5 text-white shadow-xl">
                 <div className="text-2xl font-bold">5+</div>

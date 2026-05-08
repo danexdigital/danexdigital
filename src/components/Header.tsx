@@ -28,7 +28,7 @@ function Header() {
               key={item.to}
               to={item.to}
               className={({ isActive }) =>
-                `font-medium transition-colors duration-200 ${isActive ? 'text-brand' : 'text-slate-700 hover:text-brand'
+                `font-medium transition-colors duration-200 ${isActive ? 'text-brand' : 'text-slate-700 hover:text-blue-600'
                 }`
               }
             >
