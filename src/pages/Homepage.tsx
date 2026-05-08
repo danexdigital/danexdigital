@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import danexFounder from '../images/DanexFounder.png';
 
 const stats = [
   { label: 'Years Exp', value: '5+' },
@@ -8,39 +9,51 @@ const stats = [
 function Homepage() {
   return (
     <div className="overflow-hidden">
-      <section className="relative bg-gradient-to-br from-slate-100 via-white to-slate-50 pb-20 pt-28 lg:pt-32">
+      <section className="relative bg-gradient-to-br from-slate-100 via-white to-slate-50 pb-20 pt-28 lg:pt-20">
         <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute -top-24 -right-24 h-80 w-80 rounded-full bg-brand/10 blur-3xl" />
-          <div className="absolute top-1/2 -left-28 h-96 w-96 rounded-full bg-emerald-200/20 blur-3xl" />
+          <div className="absolute -top-24 -right-24 h-80 w-80 rounded-full bg-blue-500/20 blur-3xl" />
+          <div className="absolute top-1/2 -left-28 h-96 w-96 rounded-full bg-emerald-200/25 blur-3xl" />
           <div className="absolute -bottom-20 right-1/4 h-72 w-72 rounded-full bg-amber-200/20 blur-3xl" />
         </div>
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
             <div className="text-center lg:text-left">
-              <div className="inline-flex items-center gap-2 rounded-full bg-brand/10 px-4 py-2 text-sm font-semibold text-brand">
-                <span className="inline-flex h-2 w-2 rounded-full bg-emerald-500" />
-                For Local Service Businesses
+              <div className="inline-flex items-center gap-2 rounded-[10px] px-4 py-2 text-sm font-normal uppercase text-brand tracking-[0.18em]">
+                 Marketing For Local Service Businesses
               </div>
               <h1 className="mt-8 text-4xl font-bold text-slate-950 sm:text-5xl lg:text-6xl">
                 We Build{' '}
-                <span className="bg-gradient-to-r from-brand to-violet-500 bg-clip-text text-transparent">
+                <span className="bg-gradient-to-r from-[var(--color-primary)] to-violet-500 bg-clip-text text-transparent">
                   High-Converting
                 </span>{' '}
                 Websites
               </h1>
               <p className="mt-6 max-w-xl text-lg leading-8 text-slate-600 sm:text-xl">
-                More customers, leads, and sales with fast, proven websites designed to actually grow your business — not just look good.
+                More customers, leads, and sales with fast, proven websites.
               </p>
 
-              <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:justify-start">
-                <Link
-                  to="/book"
-                  className="inline-flex items-center justify-center gap-2 rounded-full bg-brand px-8 py-4 text-base font-semibold text-white shadow-lg shadow-brand/20 transition hover:bg-slate-900"
-                >
-                  Book a Free Strategy Call
-                  <span aria-hidden="true">→</span>
-                </Link>
-              </div>
+              <Link
+                to="/book"
+                className="mt-6 inline-flex items-center justify-center gap-4 rounded-[10px] bg-brand px-8 py-3.5 text-base font-semibold text-white shadow-lg shadow-brand/20 transition hover:bg-slate-900"
+              >
+                <img
+                  src={danexFounder}
+                  alt="Danex founder"
+                  className="h-12 w-12 rounded-full border-2 border-white/20 object-cover"
+                />
+
+                {/* Wrap the text in a column container */}
+                <div className="flex flex-col items-start leading-tight">
+                  <span className="text-lg font-bold tracking-wide">
+                    Book a 15 Min. Chat
+                  </span>
+                  <span className="text-xs font-normal opacity-80 uppercase tracking-wider">
+                    No Pressure Zoom Call
+                  </span>
+                </div>
+
+                <span className="text-xl" aria-hidden="true">→</span>
+              </Link>
 
               <div className="mt-10 flex flex-col items-center gap-6 text-sm text-slate-600 sm:flex-row sm:justify-start">
                 <div className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white px-4 py-3 shadow-sm">
@@ -95,18 +108,18 @@ function Homepage() {
               </div>
             </div>
 
-            <div className="space-y-8 rounded-[32px] bg-gradient-to-br from-brand to-violet-500 p-8 shadow-2xl text-white sm:p-10">
-              <div className="inline-flex rounded-full bg-white/15 px-4 py-1 text-sm font-semibold text-white">
+            <div className="space-y-8 rounded-[32px] bg-gradient-to-br from-brand to-violet-500 p-8 shadow-2xl text-black sm:p-10">
+              <div className="inline-flex rounded-full bg-indigo-100 px-4 py-1 text-sm font-semibold text-blue-600">
                 The Danex Way
               </div>
               <h2 className="text-3xl font-bold">You Don't Need a "Fancy" Website.</h2>
-              <p className="text-lg leading-8 text-white/80">
+              <p className="text-lg leading-8 text-black">
                 You need a website that actually gets you results. That's exactly what we build.
               </p>
               <div className="space-y-4">
                 {['Gets you leads', 'Turns visitors into customers', 'Helps your business grow'].map((item) => (
-                  <div key={item} className="flex items-start gap-4 rounded-3xl border border-white/20 bg-white/10 p-4">
-                    <div className="flex h-10 w-10 items-center justify-center rounded-2xl bg-white/20 text-white">
+                  <div key={item} className="flex items-start gap-4 rounded-3xl border border-slate-200 bg-blue-100 p-4">
+                    <div className="flex h-10 w-10 items-center justify-center rounded-2xl bg-blue-500 text-white">
                       ✓
                     </div>
                     <span className="text-base font-medium">{item}</span>

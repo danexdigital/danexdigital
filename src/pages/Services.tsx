@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import danexFounder from '../images/DanexFounder.png';
 import { CheckCircleIcon, XMarkIcon } from '@heroicons/react/20/solid'
 
 const comparisonData = [
@@ -95,8 +96,13 @@ function Services() {
 
               <Link
                 to="/book"
-                className="mt-10 inline-flex items-center rounded-full bg-brand px-8 py-4 text-base font-semibold text-white shadow-lg shadow-brand/20 transition hover:bg-slate-900"
+                className="mt-10 inline-flex items-center gap-3 rounded-full bg-brand px-8 py-4 text-base font-semibold text-white shadow-lg shadow-brand/20 transition hover:bg-slate-900"
               >
+                <img
+                  src={danexFounder}
+                  alt="Danex founder"
+                  className="h-10 w-10 rounded-full border border-white/20 object-cover"
+                />
                 Book Your Strategy Call
               </Link>
             </div>
