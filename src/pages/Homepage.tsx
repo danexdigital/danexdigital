@@ -62,11 +62,11 @@ function Homepage() {
                   className="h-[540px] w-full object-cover"
                 />
               </div>
-              <div className="absolute -top-6 -right-6 rounded-3xl bg-emerald-500 px-6 py-5 text-white shadow-xl">
+              <div className="absolute -top-6 -right-6 z-20 rounded-3xl bg-emerald-500 px-6 py-5 text-white shadow-xl">
                 <div className="text-2xl font-bold">5+</div>
                 <div className="text-sm uppercase tracking-[0.18em]">Years Exp</div>
               </div>
-              <div className="absolute -bottom-6 -left-6 rounded-3xl bg-brand px-6 py-5 text-white shadow-xl">
+              <div className="absolute -bottom-6 -left-6 z-20 rounded-3xl bg-brand px-6 py-5 text-white shadow-xl">
                 <div className="text-2xl font-bold">100%</div>
                 <div className="text-sm uppercase tracking-[0.18em]">Satisfaction</div>
               </div>

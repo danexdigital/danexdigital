@@ -1,43 +1,67 @@
 import { Link } from 'react-router-dom';
 import { CheckCircleIcon, XMarkIcon } from '@heroicons/react/20/solid'
 
-const services = [
+const comparisonData = [
   {
-    title: 'High-Converting Service Websites',
-    description: 'Modern landing pages optimized to turn visitors into leads for local service businesses.',
-    badge: 'Web Design'
+    other: "Expensive startup fee + monthly recurring fee",
+    pait: "No startup fee + low monthly fee",
   },
   {
-    title: 'Local SEO & Google Visibility',
-    description: 'SEO structure, keyword focus, and local search optimization to get found by nearby customers.',
-    badge: 'SEO'
+    other: "2-4 month turnaround",
+    pait: "5-7 day turnaround",
   },
   {
-    title: 'Lead Capture Funnels',
-    description: 'Clear paths to capture contact requests, quote forms, and appointment bookings.',
-    badge: 'Funnels'
+    other: "Basic contact form",
+    pait: "Advanced contact form with text notifications + followup automations",
   },
   {
-    title: 'Conversion-Focused Copy',
-    description: 'Benefit-led storytelling, compelling calls to action, and persuasive messaging that sells.',
-    badge: 'Copywriting'
+    other: "No lead management capabilities",
+    pait: "Track traffic, leads and customers all from your site dashboard",
   },
-  {
-    title: 'Fast Launch System',
-    description: 'Launch in days with our proven process — no months of delays, no project fatigue.',
-    badge: 'Speed'
-  },
-  {
-    title: 'Analytics & Performance Optimization',
-    description: 'Clear performance tracking and continuous improvement for better ROI over time.',
-    badge: 'Analytics'
-  }
 ];
+
+export function ComparisonCard() {
+  return (
+    <div className="mx-auto max-w-4xl rounded-[32px] bg-[#1a1a1a] p-8 text-white shadow-2xl sm:p-12">
+      {/* Header Row */}
+      <div className="grid grid-cols-2 gap-8 border-b border-white/10 pb-10">
+        <h3 className="text-xl font-bold uppercase tracking-wider text-slate-400 sm:text-2xl">
+          Other Design Agencies
+        </h3>
+        <div className="flex items-center gap-2">
+          {/* Replace with your actual Logo SVG or Image */}
+          <span className="text-3xl font-bold text-white underline decoration-brand">
+            Danex Digital
+          </span>
+        </div>
+      </div>
+
+      {/* Comparison Rows */}
+      <div className="divide-y divide-white/10">
+        {comparisonData.map((item, index) => (
+          <div key={index} className="grid grid-cols-2 gap-8 py-8">
+            {/* "Other" Column */}
+            <div className="flex items-start gap-3">
+              <XMarkIcon className="mt-1 h-6 w-6 flex-none text-rose-500" />
+              <p className="text-lg text-slate-300 leading-snug">{item.other}</p>
+            </div>
+
+            {/* "Pait" Column */}
+            <div className="flex items-start gap-3">
+              <CheckCircleIcon className="mt-1 h-6 w-6 flex-none text-blue-400" />
+              <p className="text-lg font-medium text-white leading-snug">{item.pait}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
 
 function Services() {
   return (
     <div className="bg-slate-50">
-      <section className="bg-white py-20 lg:py-28">
+      <section className="bg-white py-20 lg:py-22">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid gap-12 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
             <div>
@@ -86,17 +110,19 @@ function Services() {
             </div>
           </div>
         </div>
+      </section>
 
-        <div className="mt-16 grid gap-6 sm:grid-cols-2">
-          {services.slice(0, 4).map((service) => (
-            <article key={service.title} className="rounded-[28px] border border-slate-200 bg-slate-50 p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-xl">
-              <span className="inline-flex rounded-full bg-brand/10 px-3 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-brand">
-                {service.badge}
-              </span>
-              <h2 className="mt-6 text-xl font-semibold text-slate-950">{service.title}</h2>
-              <p className="mt-4 text-slate-600">{service.description}</p>
-            </article>
-          ))}
+      <section className="bg-slate-50 py-12">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          {/* Section Header (Optional but recommended) */}
+          <div className="mb-16 text-center">
+            <h2 className="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">
+              The <span className="text-brand">Danex</span> Advantage
+            </h2>
+          </div>
+
+          {/* Calling your component here */}
+          <ComparisonCard />
         </div>
       </section>
 
@@ -128,7 +154,7 @@ function Services() {
 
       <section className="bg-slate-950 py-20 lg:py-28 text-white">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="max-w-3xl">
+          <div className="mx-auto max-w-3xl text-center">
             <span className="inline-flex rounded-full bg-brand/20 px-4 py-1 text-sm font-semibold text-brand">
               Marketing Features
             </span>
