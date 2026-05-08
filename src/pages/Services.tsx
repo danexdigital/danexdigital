@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import { CheckCircleIcon, XMarkIcon } from '@heroicons/react/20/solid'
 
 const services = [
   {
@@ -41,7 +42,7 @@ function Services() {
           <div className="grid gap-12 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
             <div>
               <h1 className="mt-6 text-4xl font-bold text-slate-950 sm:text-5xl">
-                A Smart Website & Marketing System to Grow Your Business
+                A Smart Website & Marketing System to <span className="text-brand">Grow Your Business</span>
               </h1>
               {/* --- NEW CHECKLIST START --- */}
               <ul className="mt-8 max-w-xl space-y-4">
@@ -118,15 +119,6 @@ function Services() {
                     alt="Portfolio sample"
                     className="h-72 w-full object-cover transition duration-500 group-hover:scale-105"
                   />
-                </div>
-                <div className="p-8">
-                  <span className="inline-flex rounded-full bg-brand/10 px-3 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-brand">
-                    Local Business
-                  </span>
-                  <h2 className="mt-4 text-2xl font-semibold text-slate-950">Conversion-Focused Landing Page</h2>
-                  <p className="mt-4 text-slate-600">
-                    Designed to highlight services, collect leads, and help local brands convert visitors into customers.
-                  </p>
                 </div>
               </article>
             ))}
