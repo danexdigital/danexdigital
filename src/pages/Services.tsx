@@ -107,12 +107,22 @@ function Services() {
               </Link>
             </div>
 
-            <div className="overflow-hidden rounded-[32px] bg-slate-100 shadow-xl">
-              <img
-                src="https://assets.ls-assets.com/uploads/7444f86a-574a-4dd4-be57-ea2f91c183eb/d0dd0610-eb3a-495e-80d5-7801a27f88e9.webp?w=1200"
-                alt="Service website example"
-                className="h-full w-full min-h-[360px] object-cover"
-              />
+            <div className="relative">
+              <div className="overflow-hidden rounded-[32px] bg-slate-100 shadow-xl">
+                <img
+                  src="https://assets.ls-assets.com/uploads/7444f86a-574a-4dd4-be57-ea2f91c183eb/d0dd0610-eb3a-495e-80d5-7801a27f88e9.webp?w=1200"
+                  alt="Service website example"
+                  className="h-full w-full min-h-[360px] object-cover"
+                />
+              </div>
+              <div className="absolute -top-6 -right-6 z-20 rounded-3xl bg-emerald-500 px-6 py-5 text-white shadow-xl">
+                <div className="text-2xl font-bold">5+</div>
+                <div className="text-sm uppercase tracking-[0.18em]">Years Exp</div>
+              </div>
+              <div className="absolute -bottom-6 -left-6 z-20 rounded-3xl bg-brand px-6 py-5 text-white shadow-xl">
+                <div className="text-2xl font-bold">100%</div>
+                <div className="text-sm uppercase tracking-[0.18em]">Satisfaction</div>
+              </div>
             </div>
           </div>
         </div>

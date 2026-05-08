@@ -23,7 +23,7 @@ function Homepage() {
           <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
             <div className="text-center lg:text-left">
               <div className="inline-flex items-center gap-2 rounded-[10px] px-4 py-2 text-sm font-normal uppercase text-brand tracking-[0.18em]">
-                 Marketing For Local Service Businesses
+                Marketing For Local Service Businesses
               </div>
               <h1 className="mt-8 text-4xl font-bold text-slate-950 sm:text-5xl lg:text-6xl">
                 We Build{' '}
@@ -78,37 +78,29 @@ function Homepage() {
                   alt="Web UI-UX design concept"
                   className="h-[400px] w-full object-cover rounded-[32px]"
                 />
-                
-                {/* Overlay Images */}
+
+                {/* Overlay Images - Stacked on Left */}
                 {/* Google Search Overlay - Top Left */}
                 <img
                   src={googlesearch}
                   alt="Google Search"
-                  className="absolute top-0 left-0 w-50 h-20 object-cover rounded-lg shadow-lg z-20 -translate-y--15 -translate-x-4"
+                  className="absolute top-4 left-0 w-[90%] h-12 object-cover rounded-lg shadow-lg z-20 -translate-x-4"
                 />
-                
-                {/* ChatGPT Overlay - Top Right */}
+
+                {/* 2. ChatGPT - Shrunk width (w-20) and height (h-24) */}
                 <img
                   src={chatgpt}
                   alt="ChatGPT"
-                  className="absolute right-0 w-25 h-15 object-cover rounded-lg shadow-lg z-20 -translate-y-40 translate-x-4"
+                  className="absolute top-1/2 left-0 w-50 h-24 object-cover rounded-lg shadow-lg z-20 -translate-y-1/2 -translate-x-4"
                 />
-                
-                {/* Best Hospital Overlay - Bottom Center */}
+
+                {/* 3. Best Hospital - Shrunk and moved lower */}
                 <img
                   src={besthospital}
                   alt="Best Hospital"
-                  className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-40 h-32 object-cover rounded-lg shadow-lg z-20 translate-y-4"
+                  className="absolute -bottom-6 left-0 w-50 h-40 object-cover rounded-lg shadow-lg z-20 -translate-x-4"
                 />
-              
-              </div>
-              <div className="absolute -top-6 -right-6 z-20 rounded-3xl bg-emerald-500 px-6 py-5 text-white shadow-xl">
-                <div className="text-2xl font-bold">5+</div>
-                <div className="text-sm uppercase tracking-[0.18em]">Years Exp</div>
-              </div>
-              <div className="absolute -bottom-6 -left-6 z-20 rounded-3xl bg-brand px-6 py-5 text-white shadow-xl">
-                <div className="text-2xl font-bold">100%</div>
-                <div className="text-sm uppercase tracking-[0.18em]">Satisfaction</div>
+
               </div>
             </div>
           </div>
