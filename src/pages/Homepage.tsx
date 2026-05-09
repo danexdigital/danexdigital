@@ -1,13 +1,47 @@
 import { Link } from 'react-router-dom';
+import { CalendlyButton } from '../components/CalendlyButton';
 import danexFounder from '../images/DanexFounder.png';
 import triocrop from '../images/triocrop.png';
 import googlesearch from '../images/googlesearch.png';
 import chatgpt from '../images/chatgpt.png';
 import besthospital from '../images/besthospital.png';
+import goldauto1 from '../images/goldauto1.png';
+import mlaundry from '../images/mlaundry.png';
+import dwdwash2 from '../images/dwdwash2.png';
+import dandeutsch from '../images/dandeutsch.png';
+
+const calendlyUrl = 'https://calendly.com/danexdigitalservices/30min';
 
 const stats = [
   { label: 'Years Exp', value: '5+' },
   { label: 'Satisfaction', value: '100%' }
+];
+
+const workCards = [
+  {
+    tag: 'Local Service Business',
+    subtitle: 'Lead generation optimized layouts',
+    src: goldauto1,
+    alt: 'Gold Auto website example',
+  },
+  {
+    tag: 'Service Industry',
+    subtitle: 'Perfect on every device',
+    src: mlaundry,
+    alt: 'mLaundry website example',
+  },
+  {
+    tag: 'Home Services',
+    subtitle: 'Professional, trustworthy presence',
+    src: dwdwash2,
+    alt: 'DWD Wash website example',
+  },
+  {
+    tag: 'Professional Services',
+    subtitle: 'Built to rank and get found',
+    src: dandeutsch,
+    alt: 'Dan Deutsch website example',
+  },
 ];
 
 function Homepage() {
@@ -47,8 +81,7 @@ function Homepage() {
                 </div>
               </div>
 
-              <Link
-                to="/book"
+              <CalendlyButton
                 className="mt-5 inline-flex items-center justify-center gap-4 rounded-[10px] bg-brand px-8 py-3.5 text-base font-semibold text-white shadow-lg shadow-brand/20 transition hover:bg-emerald-600"
               >
                 <img
@@ -68,7 +101,7 @@ function Homepage() {
                 </div>
 
                 <span className="text-xl" aria-hidden="true">→</span>
-              </Link>
+              </CalendlyButton>
             </div>
 
             <div className="relative">
@@ -127,15 +160,15 @@ function Homepage() {
               </div>
             </div>
 
-            <div className="space-y-8 rounded-[32px] bg-gradient-to-br from-brand to-violet-500 p-8 shadow-2xl text-black sm:p-10">
+            <div className="space-y-8 rounded-[32px] bg-gradient-to-br from-brand to-violet-500 p-8 shadow-2xl text-white sm:p-10">
               <div className="inline-flex rounded-full bg-indigo-100 px-4 py-1 text-sm font-semibold text-blue-600">
                 The Danex Way
               </div>
               <h2 className="text-3xl font-bold">You Don't Need a "Fancy" Website.</h2>
-              <p className="text-lg leading-8 text-black">
+              <p className="text-lg leading-8 text-black font-medium">
                 You need a website that actually gets you results. That's exactly what we build.
               </p>
-              <div className="space-y-4">
+              <div className="space-y-4 text-black">
                 {['Gets you leads', 'Turns visitors into customers', 'Helps your business grow'].map((item) => (
                   <div key={item} className="flex items-start gap-4 rounded-3xl border border-slate-200 bg-blue-100 p-4">
                     <div className="flex h-10 w-10 items-center justify-center rounded-2xl bg-blue-500 text-white">
@@ -231,34 +264,28 @@ function Homepage() {
               Our Work
             </div>
             <h2 className="mt-6 text-3xl font-bold sm:text-4xl lg:text-5xl">
-              Websites We've Built for Our Clients
+              Get a Smart Website that Grows Your Business
             </h2>
             <p className="mx-auto mt-5 max-w-3xl text-lg leading-8 text-slate-300">
-              High-converting websites designed to grow local service businesses.
+              Here are just a few examples:
             </p>
           </div>
 
           <div className="mt-16 grid gap-6 md:grid-cols-2">
-            {[
-              { tag: 'Local Service Business', title: 'Conversion-Focused Design', subtitle: 'Lead generation optimized layouts' },
-              { tag: 'Service Industry', title: 'Mobile-First Approach', subtitle: 'Perfect on every device' },
-              { tag: 'Home Services', title: 'Brand-Aligned Design', subtitle: 'Professional, trustworthy presence' },
-              { tag: 'Professional Services', title: 'SEO-Optimized Structure', subtitle: 'Built to rank and get found' }
-            ].map((item) => (
-              <article key={item.title} className="group overflow-hidden rounded-3xl shadow-2xl">
+            {workCards.map((item) => (
+              <article key={item.subtitle} className="group overflow-hidden rounded-3xl shadow-2xl">
                 <div className="relative overflow-hidden">
                   <img
-                    className="h-72 w-full object-cover transition duration-500 group-hover:scale-105"
-                    src="https://assets.ls-assets.com/uploads/7444f86a-574a-4dd4-be57-ea2f91c183eb/d0dd0610-eb3a-495e-80d5-7801a27f88e9.webp?w=768"
-                    alt={item.title}
+                    className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
+                    src={item.src}
+                    alt={item.alt}
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-950/40 to-transparent" />
                   <div className="absolute bottom-0 left-0 right-0 p-6">
                     <span className="inline-flex rounded-full bg-brand px-3 py-1 text-xs font-semibold uppercase tracking-[0.18em] text-white">
                       {item.tag}
                     </span>
-                    <h3 className="mt-4 text-2xl font-bold text-white">{item.title}</h3>
-                    <p className="mt-2 text-sm text-slate-200">{item.subtitle}</p>
+                    <p className="mt-4 text-sm text-slate-200">{item.subtitle}</p>
                   </div>
                 </div>
               </article>
@@ -325,12 +352,11 @@ function Homepage() {
             Book a free call and we'll walk you through exactly how we can help you get more leads and customers.
           </p>
           <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
-            <Link
-              to="/book"
+            <CalendlyButton
               className="inline-flex items-center justify-center gap-3 rounded-full bg-brand px-10 py-5 text-lg font-semibold text-white shadow-2xl shadow-brand/30 transition hover:bg-slate-900"
             >
               Book Your Free Strategy Call
-            </Link>
+            </CalendlyButton>
           </div>
           <div className="mt-10 flex flex-wrap justify-center gap-6 text-sm text-slate-400">
             {['100% Free, No Obligation', '30-Min Call', 'Pay Only When Happy'].map((item) => (

@@ -1,6 +1,11 @@
-import { Link } from 'react-router-dom';
+import { CalendlyButton } from '../components/CalendlyButton';
 import danexFounder from '../images/DanexFounder.png';
 import { CheckCircleIcon, XMarkIcon } from '@heroicons/react/20/solid'
+import dwdcar from '../images/dwdcar.png';
+import goldauto1 from '../images/goldauto1.png';
+import mlaundry from '../images/mlaundry.png';
+import dwdwash2 from '../images/dwdwash2.png';
+import dandeutsch from '../images/dandeutsch.png';
 
 const comparisonData = [
   {
@@ -18,6 +23,37 @@ const comparisonData = [
   {
     other: "No lead management capabilities",
     pait: "Track traffic, leads and customers all from your site dashboard",
+  },
+];
+
+const workCards = [
+  {
+    src: goldauto1,
+    alt: 'Gold Auto website example',
+    tag: 'Local Service Business',
+    title: 'Conversion-Focused Design',
+    subtitle: 'Lead generation optimized layouts',
+  },
+  {
+    src: mlaundry,
+    alt: 'mLaundry website example',
+    tag: 'Service Industry',
+    title: 'Mobile-First Approach',
+    subtitle: 'Perfect on every device',
+  },
+  {
+    src: dwdwash2,
+    alt: 'DWD Wash website example',
+    tag: 'Home Services',
+    title: 'Brand-Aligned Design',
+    subtitle: 'Professional, trustworthy presence',
+  },
+  {
+    src: dandeutsch,
+    alt: 'Dan Deutsch website example',
+    tag: 'Professional Services',
+    title: 'SEO-Optimized Structure',
+    subtitle: 'Built to rank and get found',
   },
 ];
 
@@ -94,8 +130,7 @@ function Services() {
               </ul>
               {/* --- NEW CHECKLIST END --- */}
 
-              <Link
-                to="/book"
+              <CalendlyButton
                 className="mt-10 inline-flex items-center gap-3 rounded-full bg-brand px-8 py-4 text-base font-semibold text-white shadow-lg shadow-brand/20 transition hover:bg-slate-900"
               >
                 <img
@@ -104,14 +139,14 @@ function Services() {
                   className="h-10 w-10 rounded-full border border-white/20 object-cover"
                 />
                 Book Your Strategy Call
-              </Link>
+              </CalendlyButton>
             </div>
 
             <div className="relative">
               <div className="overflow-hidden rounded-[32px] bg-slate-100 shadow-xl">
                 <img
-                  src="https://assets.ls-assets.com/uploads/7444f86a-574a-4dd4-be57-ea2f91c183eb/d0dd0610-eb3a-495e-80d5-7801a27f88e9.webp?w=1200"
-                  alt="Service website example"
+                  src={dwdcar}
+                  alt="Service website form example"
                   className="h-full w-full min-h-[360px] object-cover"
                 />
               </div>
@@ -153,12 +188,12 @@ function Services() {
           </div>
 
           <div className="mt-16 grid gap-6 md:grid-cols-2">
-            {Array.from({ length: 4 }).map((_, index) => (
-              <article key={index} className="group overflow-hidden rounded-3xl bg-white shadow-2xl">
+            {workCards.map((item) => (
+              <article key={item.title} className="group overflow-hidden rounded-3xl shadow-2xl bg-white">
                 <div className="relative overflow-hidden">
                   <img
-                    src="https://assets.ls-assets.com/uploads/7444f86a-574a-4dd4-be57-ea2f91c183eb/d0dd0610-eb3a-495e-80d5-7801a27f88e9.webp?w=768"
-                    alt="Portfolio sample"
+                    src={item.src}
+                    alt={item.alt}
                     className="h-72 w-full object-cover transition duration-500 group-hover:scale-105"
                   />
                 </div>

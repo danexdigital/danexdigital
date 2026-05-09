@@ -1,9 +1,12 @@
 import { NavLink } from 'react-router-dom';
+import { CalendlyButton } from './CalendlyButton';
 
 const quickLinks = [
   { label: 'How It Works', to: '/how-it-works' },
   { label: 'Services', to: '/services' }
 ];
+
+const calendlyUrl = 'https://calendly.com/danexdigitalservices/30min';
 
 const resources = [
   { label: 'FAQ', to: '/faq' },
@@ -70,12 +73,14 @@ function Footer() {
             <p className="mt-6 text-sm leading-6 text-slate-400">
               Let's discuss how we can help grow your business with a high-converting website.
             </p>
-            <NavLink
-              to="/book"
+            <p className="mt-4 text-sm text-slate-300">
+              Email us at <a href="mailto:danexdigitalservices@gmail.com" className="text-white hover:text-brand">danexdigitalservices@gmail.com</a>
+            </p>
+            <CalendlyButton
               className="mt-6 inline-flex items-center gap-2 rounded-3xl bg-brand px-5 py-3 text-sm font-semibold text-white transition hover:bg-slate-900"
             >
               Book a Free Call
-            </NavLink>
+            </CalendlyButton>
           </div>
         </div>
 

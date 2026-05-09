@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { NavLink } from 'react-router-dom';
+import { CalendlyButton } from './CalendlyButton';
 import danexlogo from '../images/danexlogo.webp';
 
 const navItems = [
@@ -7,6 +8,8 @@ const navItems = [
   { label: 'Contact Us', to: '/contact' },
   { label: 'FAQ', to: '/faq' }
 ];
+
+const calendlyUrl = 'https://calendly.com/danexdigitalservices/30min';
 
 function Header() {
   const [open, setOpen] = useState(false);
@@ -38,8 +41,7 @@ function Header() {
         </nav>
 
         <div className="hidden lg:block">
-          <NavLink
-            to="/book"
+          <CalendlyButton
             className="inline-flex flex-col items-center rounded-[10px] bg-brand px-7 py-2.5  text-white shadow-xl shadow-brand/20 transition hover:bg-slate-900"
           >
             {/* Main Heading */}
@@ -51,7 +53,7 @@ function Header() {
             <span className="text-[10px] font-normal opacity-90 uppercase tracking-widest">
               Free 5-Minute Demo
             </span>
-          </NavLink>
+          </CalendlyButton>
         </div>
       </div>
 
@@ -80,14 +82,13 @@ function Header() {
                   {item.label}
                 </NavLink>
               ))}
-              <NavLink
-                to="/book"
-                onClick={() => setOpen(false)}
+              <CalendlyButton
                 className="inline-flex items-center justify-center rounded-2xl bg-brand px-5 py-3 text-sm font-semibold text-white shadow-xl shadow-brand/15"
+                onOpen={() => setOpen(false)}
               >
-                See How It Works <br></br>
+                See How It Works <br />
                 Free 5-Minute Demo
-              </NavLink>
+              </CalendlyButton>
             </nav>
           </div>
         )
