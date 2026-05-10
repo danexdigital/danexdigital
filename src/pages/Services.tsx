@@ -103,7 +103,7 @@ function Services() {
           <div className="grid gap-12 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
             <div>
               <h1 className="mt-6 text-4xl font-bold text-slate-950 sm:text-5xl">
-                A Smart Website & Marketing System to <span className="text-brand">Grow Your Business</span>
+                A Smart Website & Marketing System to <span className="bg-gradient-to-r from-[var(--color-primary)] to-violet-700 text-transparent bg-clip-text">Grow Your Business</span>
               </h1>
               {/* --- NEW CHECKLIST START --- */}
               <ul className="mt-8 max-w-xl space-y-4">
@@ -131,12 +131,12 @@ function Services() {
               {/* --- NEW CHECKLIST END --- */}
 
               <CalendlyButton
-                className="mt-10 inline-flex items-center gap-3 rounded-full bg-brand px-8 py-4 text-base font-semibold text-white shadow-lg shadow-brand/20 transition hover:bg-slate-900"
+                className="mt-10 inline-flex items-center gap-3 rounded-[32px] bg-brand px-8 py-4 text-base font-semibold text-white shadow-lg shadow-brand/20 transition hover:bg-slate-900"
               >
                 <img
                   src={danexFounder}
                   alt="Danex founder"
-                  className="h-10 w-10 rounded-full border border-white/20 object-cover"
+                  className="h-10 w-10 rounded-[10px] border border-white/20 object-cover"
                 />
                 Book Your Strategy Call
               </CalendlyButton>
