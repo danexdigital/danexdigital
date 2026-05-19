@@ -20,25 +20,21 @@ const stats = [
 const workCards = [
   {
     tag: 'Local Service Business',
-    subtitle: 'Lead generation optimized layouts',
     src: goldauto1,
     alt: 'Gold Auto website example',
   },
   {
     tag: 'Service Industry',
-    subtitle: 'Perfect on every device',
     src: mlaundry,
     alt: 'mLaundry website example',
   },
   {
     tag: 'Home Services',
-    subtitle: 'Professional, trustworthy presence',
     src: dwdwash2,
     alt: 'DWD Wash website example',
   },
   {
     tag: 'Professional Services',
-    subtitle: 'Built to rank and get found',
     src: dandeutsch,
     alt: 'Dan Deutsch website example',
   },
@@ -47,35 +43,35 @@ const workCards = [
 function Homepage() {
   return (
     <div className="overflow-hidden">
-      <section className="relative bg-gradient-to-br from-slate-100 via-white to-slate-50 pb-20 pt-28 lg:pt-20">
-        <div className="absolute inset-0 overflow-hidden">
+      <section className="relative bg-gradient-to-br from-slate-100 via-white to-slate-50 pb-20 pt-10 lg:pt-15">
+        <div className="absolute -top-10 inset-x-0 bottom-0 overflow-hidden">
           <div className="absolute -top-24 -right-24 h-80 w-80 rounded-full bg-blue-500/20 blur-3xl" />
           <div className="absolute top-1/2 -left-28 h-96 w-96 rounded-full bg-emerald-200/25 blur-3xl" />
-          <div className="absolute -bottom-20 right-1/4 h-72 w-72 rounded-full bg-amber-200/20 blur-3xl" />
+          <div className="absolute -bottom-20 right-1/4 h-72 w-72 rounded-full bg-amber-200/40 blur-3xl" />
         </div>
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
             <div className="text-center lg:text-left">
-              <div className="inline-flex items-center gap-2 rounded-[10px] px-4 py-2 text-sm font-normal uppercase text-brand tracking-[0.18em]">
-                Marketing For Local Service Businesses
+              <div className="inline-flex items-center gap-2 rounded-[10px] px-4 py-2 text-sm font-normal uppercase text-blue-700 tracking-[0.18em]">
+                Marketing For Small Companies
               </div>
               <h1 className="mt-8 text-4xl font-bold text-slate-950 sm:text-5xl lg:text-6xl">
                 We Build{' '}
                 <span className="bg-gradient-to-r from-[var(--color-primary)] to-violet-500 bg-clip-text text-transparent">
-                  High-Converting
+                  Reliable, Smart
                 </span>{' '}
-                Websites
+                Websites For Local Businesses
               </h1>
-              <p className="mt-6 max-w-xl text-lg leading-8 text-slate-600 sm:text-xl">
+              <p className="mt-6 max-w-xl text-lg leading-8 text-slate-700 sm:text-xl">
                 More customers, leads, and sales with fast, proven websites.
               </p>
 
-              <div className="mt-5 flex flex-col items-center gap-6 text-sm text-slate-600 sm:flex-row sm:justify-start">
-                <div className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white px-4 py-3 shadow-sm">
+              <div className="mt-5 flex flex-col items-center gap-6 text-sm text-slate-700 sm:flex-row sm:justify-start">
+                <div className="inline-flex items-center gap-2 rounded-full border border-slate-400 bg-white px-4 py-3 shadow-sm">
                   <span className="inline-flex h-2.5 w-2.5 rounded-full bg-emerald-500" />
                   No Setup Fee
                 </div>
-                <div className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white px-4 py-3 shadow-sm">
+                <div className="inline-flex items-center gap-2 rounded-full border border-slate-400 bg-white px-4 py-3 shadow-sm">
                   <span className="inline-flex h-2.5 w-2.5 rounded-full bg-red-500" />
                   1 Week Turnaround
                 </div>
@@ -273,19 +269,18 @@ function Homepage() {
 
           <div className="mt-16 grid gap-6 md:grid-cols-2">
             {workCards.map((item) => (
-              <article key={item.subtitle} className="group overflow-hidden rounded-3xl shadow-2xl">
+              <article key={item.tag} className="group overflow-hidden rounded-3xl shadow-2xl">
                 <div className="relative overflow-hidden">
                   <img
                     className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
                     src={item.src}
                     alt={item.alt}
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-950/40 to-transparent" />
-                  <div className="absolute bottom-0 left-0 right-0 p-6">
+                  <div className="absolute inset-0 bg-transparent" />
+                  <div className="absolute bottom-4 left-0 right-0 p-6">
                     <span className="inline-flex rounded-full bg-brand px-3 py-1 text-xs font-semibold uppercase tracking-[0.18em] text-white">
                       {item.tag}
                     </span>
-                    <p className="mt-4 text-sm text-slate-200">{item.subtitle}</p>
                   </div>
                 </div>
               </article>
