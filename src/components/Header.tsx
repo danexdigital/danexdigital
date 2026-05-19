@@ -88,7 +88,6 @@ function Header() {
             
             {/* Mobile CTA Button */}
             <CalendlyButton
-              onOpen={() => setOpen(false)}
               className="mt-2 flex flex-col items-center justify-center rounded-2xl bg-brand px-5 py-4 text-white shadow-lg"
             >
               <span className="text-base font-bold">See How It Works</span>
