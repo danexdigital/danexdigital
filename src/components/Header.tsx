@@ -19,7 +19,7 @@ function Header() {
           'items-center' keeps them perfectly aligned vertically.
       */}
       <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
-        
+
         {/* LOGO SECTION */}
         <NavLink to="/" className="inline-flex items-center gap-3">
           <img
@@ -36,8 +36,7 @@ function Header() {
               key={item.to}
               to={item.to}
               className={({ isActive }) =>
-                `font-medium transition-colors duration-200 ${
-                  isActive ? 'text-brand' : 'text-slate-700 hover:text-brand'
+                `font-medium transition-colors duration-200 ${isActive ? 'text-brand' : 'text-slate-700 hover:text-brand'
                 }`
               }
             >
@@ -77,18 +76,16 @@ function Header() {
                 to={item.to}
                 onClick={() => setOpen(false)}
                 className={({ isActive }) =>
-                  `rounded-2xl px-4 py-3 text-base font-medium transition-all ${
-                    isActive ? 'bg-brand/10 text-brand' : 'text-slate-700 hover:bg-slate-50'
+                  `rounded-2xl px-4 py-3 text-base font-medium transition-all ${isActive ? 'bg-brand/10 text-brand' : 'text-slate-700 hover:bg-slate-50'
                   }`
                 }
               >
                 {item.label}
               </NavLink>
             ))}
-            
+
             {/* Mobile CTA Button */}
             <CalendlyButton
-              onOpen={() => setOpen(false)}
               className="mt-2 flex flex-col items-center justify-center rounded-2xl bg-brand px-5 py-4 text-white shadow-lg"
             >
               <span className="text-base font-bold">See How It Works</span>
